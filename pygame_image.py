@@ -12,15 +12,17 @@ def main():
     img4 = pg.transform.rotate(img3,10)
     imglst = [img3,img4]
     tmr = 0
+    x = 0
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
-        screen.blit(bg_img, [0, 0])
+        x = -tmr
+        screen.blit(bg_img, [x, 0])
         screen.blit(imglst[tmr%2],[300,200])
         pg.display.update()
         tmr += 1
-        clock.tick(10)
+        clock.tick(100)
         
 
 
