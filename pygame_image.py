@@ -17,11 +17,11 @@ def main():
             if event.type == pg.QUIT: return
 
         screen.blit(bg_img, [0, 0])
-        screen.blit(img3,[300,400])
-        screen.blit(img4, [300, 200])
+        screen.blit(imglst[tmr%2],[300,200])
         pg.display.update()
-        tmr += 1        
+        tmr += 1
         clock.tick(10)
+        
 
 
 if __name__ == "__main__":
